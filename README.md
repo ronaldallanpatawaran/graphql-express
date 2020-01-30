@@ -8,7 +8,7 @@
 2. `node server.js`
 
 ## Docker Installation
-1. `docker build -t poc/graphql-express`
+1. `docker build -t poc/graphql-express .`
 2. `docker run -p 4000/4000 -d poc/graph-express`
 
 ## BOOKS
