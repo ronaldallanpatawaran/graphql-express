@@ -53,13 +53,8 @@ const RootQuery = new GraphQLObjectType({
     fields: {
         book: {
             type: BookType,
-            //argument passed by the user while making the query
             args: { id: { type: GraphQLID } },
             resolve(parent, args) {
-                //Here we define how to get data from database source
-
-                //this will return the book with id passed in argument 
-                //by the user
                 return Book.findById(args.id);
             }
         },
@@ -73,7 +68,7 @@ const RootQuery = new GraphQLObjectType({
             type: AuthorType,
             args: { id: { type: GraphQLString } },
             resolve(parent, args) {
-                return Author.findOne(args.id);
+                return Author.findById(args.id);
             }
         },
         authors:{
